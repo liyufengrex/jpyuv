@@ -11,14 +11,14 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-            }
-        }
-//        ndk {
-//            abiFilters "armeabi-v7a"
+//        externalNativeBuild {
+//            cmake {
+//                cppFlags ""
+//            }
 //        }
+        ndk {
+            abiFilters "armeabi"
+        }
     }
 
     buildTypes {
@@ -28,11 +28,11 @@ android {
         }
     }
 
-    externalNativeBuild {
-        cmake {
-            path "CMakeLists.txt"
-        }
-    }
+//    externalNativeBuild {
+//        cmake {
+//            path "CMakeLists.txt"
+//        }
+//    }
 
     sourceSets.main {
         jniLibs.srcDirs = ['libs']
